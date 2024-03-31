@@ -1,0 +1,10 @@
+.technologies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+  .tech {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+  }
+}
