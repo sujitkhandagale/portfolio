@@ -1,0 +1,24 @@
+.intro {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 10px 0 10px 0;
+  align-self: center;
+  align-items: center;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .details {
+    //gap: 10px;
+  }
+
+  .image {
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
