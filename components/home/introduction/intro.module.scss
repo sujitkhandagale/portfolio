@@ -12,6 +12,11 @@
 
   .details {
     //gap: 10px;
+    h3 {
+      span {
+        color: var(--primary-color);
+      }
+    }
   }
 
   .image {

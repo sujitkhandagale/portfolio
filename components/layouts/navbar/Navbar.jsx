@@ -30,13 +30,14 @@ function Navbar() {
     <nav>
       <div className={style.nav_items}>
         <div className={style.logo}>
-          <Image
-            src={Logo ?? ""}
-            width={400}
-            height={400}
-            objectFit="contain"
-            alt={"logo"}
-          />
+         <Link href={"/"}>
+           <Image
+               src={Logo ?? ""}
+               width={400}
+               height={400}
+               alt={"logo"}
+           />
+         </Link>
         </div>
         <div className={style.nav_links}>
           <div className={style.nav_list}>

@@ -1,6 +1,9 @@
 // style
-import '../style/global.scss'
+import "../style/global.scss";
+import { connectDB } from "@/utils/db";
 
-export default function MyApp({Component, pageProps}) {
-    return <Component {...pageProps} />
-}      
+export default function MyApp({ Component, pageProps }) {
+  // database connection
+  connectDB();
+  return <Component {...pageProps} />;
+}
