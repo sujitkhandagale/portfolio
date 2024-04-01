@@ -2,21 +2,29 @@ import React from "react";
 import Layouts from "@/components/layouts/Layouts";
 import style from "./projects.module.scss";
 import Link from "next/link";
+import Head from "next/head";
+
 
 function Projects() {
   return (
     <Layouts>
       <div className="container">
+        <Head>
+          <title>Projects</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <h1>Projects</h1>
         <div className={style.list}>
           {ProjectsList.map((project, index) => (
             <div className={style.post} key={index}>
-              <img
-                src={`${process.env.APP_URL}${project.image}`}
-                alt="project"
-              />
+              <Link href={`${project.projectLink}`}>
+                <img
+                  src={`${process.env.APP_URL}${project.image}`}
+                  alt="project"
+                />
+              </Link>
               <h2>
-                <Link href={`?preview=${project.link}` ?? ""}>
+                <Link href={`${project.projectLink}` ?? ""}>
                   {project.name}
                 </Link>
               </h2>
@@ -35,7 +43,7 @@ const ProjectsList = [
     name: "Asiatic Esports",
     description: " Video Platform Application, with blogging feature",
     link: "asiatic-esports",
-    projectLink: "https://github.com/karanjain/asiatic-esports",
+    projectLink: "https://asiaticesports.com/",
     image: "/projects/asiaticesports.com_.jpg",
     technologies: ["React Js", "Next Js", "Node Js", "MongoDB"],
   },
@@ -43,7 +51,7 @@ const ProjectsList = [
     name: "Doctor Appointments && Consultation",
     description: " Video Platform Application, with blogging feature",
     link: "asiatic-esports",
-    projectLink: "https://github.com/karanjain/asiatic-esports",
+    projectLink: "https://doctor-consultation.sujitkhandagale.in/",
     image: "/projects/doctor-consultation.webp",
     technologies: ["React Js", "Next Js", "Node Js", "MongoDB"],
   },
