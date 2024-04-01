@@ -1,14 +1,10 @@
 import React from "react";
 import style from "./certs.module.scss";
-import Image from "next/image";
-import ImageViewer from "@/components/image-preview/ImageViewer";
-import { useRouter } from "next/router";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 function Certificates() {
   const imageLocation = process.env.APP_URL;
   console.log("imageLocation", imageLocation);
-  const router = useRouter();
   const ImagePreviewInNewTab = (imageLink) => {
     window.open(imageLink, "_blank");
   };
@@ -25,11 +21,11 @@ function Certificates() {
               }
               className={style.image}
             >
-              <Image
+              <img
                 alt="certificate"
                 width={1920}
                 height={1080}
-                src={`${imageLocation}${cert.image}`}
+                src={`${process.env.APP_URL}/${cert.image}`}
               />
 
               <div className={style.details}>
@@ -50,8 +46,7 @@ export default Certificates;
 const CertificatesList = [
   {
     name: "Full Stack Web Development",
-    image:
-      "/certificates/1689870516428.jpeg",
+    image: "certificates/1689870516428.jpeg",
     year: "2022",
     company: "UpGrad Campus",
     verificationLink:
