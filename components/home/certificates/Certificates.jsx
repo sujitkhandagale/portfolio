@@ -17,7 +17,7 @@ function Certificates() {
           <div key={index} className={style.certificate}>
             <div
               onClick={() =>
-                ImagePreviewInNewTab(`${imageLocation}${cert.image}`)
+                ImagePreviewInNewTab(`${imageLocation}/${cert.image}`)
               }
               className={style.image}
             >
