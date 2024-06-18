@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 //define color variables for global use both light and dark mode
 
-
 // define global styles
 .light {
-  --body-bg: white;
-  --box-bg: #332E3C;
+  --body-bg: #f1faee;
+  --box-bg: #1d3557;
   --body-color: black;
   --text-color: black;
   --link-color: black;
   --link-hover-color: black;
   --link-visited-color: black;
   --heading-color: black;
-  --primary-color: rgb(232, 80, 91);
+  --primary-color: #1d3557;
+  --primary-color-2: #e63946;
   --glass-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -25,7 +25,6 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-
 }
 
 $container-max-width: 1200px; // Adjust as needed
@@ -56,7 +55,6 @@ $container-max-width: 1200px; // Adjust as needed
 .main {
   padding: 10px 0 10px 0;
 }
-
 
 .image-lightbox {
   position: fixed;

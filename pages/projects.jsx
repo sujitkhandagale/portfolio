@@ -3,7 +3,7 @@ import Layouts from "@/components/layouts/Layouts";
 import style from "./projects.module.scss";
 import Link from "next/link";
 import Head from "next/head";
-
+import Image from "next/image";
 
 function Projects() {
   return (
@@ -17,12 +17,18 @@ function Projects() {
         <div className={style.list}>
           {ProjectsList.map((project, index) => (
             <div className={style.post} key={index}>
-              <Link href={`${project.projectLink}`}>
-                <img
-                  src={`${process.env.APP_URL}${project.image}`}
-                  alt="project"
-                />
-              </Link>
+              <div className={style.image}>
+                <div className={style.image_source}>
+                  <Link target={"_blank"} href={`${project.projectLink}`}>
+                    <Image
+                      width={1920}
+                      height={1080}
+                      src={`${process.env.APP_URL}${project?.image}`}
+                      alt="project"
+                    />
+                  </Link>
+                </div>
+              </div>
               <h2>
                 <Link href={`${project.projectLink}` ?? ""}>
                   {project.name}
@@ -61,6 +67,15 @@ const ProjectsList = [
     link: "asiatic-esports",
     projectLink: "https://transport.sujitkhandagale.in/",
     image: "/projects/bus-booking-template.webp",
+    technologies: ["React Js", "Next Js", "Node Js", "MongoDB"],
+  },
+  {
+    name: "Electronic Shop",
+    description:
+      "This shop offers electric switches, fans, appliances and much more to full fill shop keepers need.",
+    link: "asiatic-esports",
+    projectLink: "https://electronic-shop.sujitkhandagale.in/",
+    image: "/projects/032440.png",
     technologies: ["React Js", "Next Js", "Node Js", "MongoDB"],
   },
 ];
