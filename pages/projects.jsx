@@ -4,8 +4,6 @@ import style from "./projects.module.scss";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import asiatic from "../assets/projects/asiaticesports.com_.jpg"
-import bus from "../assets/projects/bus-booking-template.webp"
 
 function Projects() {
   return (
