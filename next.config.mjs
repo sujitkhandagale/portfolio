@@ -6,7 +6,7 @@ dotenv.config();
 const nextConfig = {
     // env
     env: {
-        APP_URL: process.env.NODE_ENV === "production" ? "https://sujitkhandagale.in" : "http://localhost:3000",
+        APP_URL: process.env.NODE_ENV === "production" ? "https://sujitkhandagale.in" : "http://localhost:3001",
     },
     // image host here
     images: {
